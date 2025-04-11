@@ -1,0 +1,13 @@
+version: '3.9'
+
+networks:
+  seti-orders-network:
+
+services:
+  seti-orders-api:
+    container_name: seti-orders-API
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    networks:
+      - seti-orders-network
